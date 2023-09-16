@@ -1,0 +1,43 @@
+Controls {
+  layout: horizontal;
+  padding: 1;
+}
+
+Button {
+  width: 20;
+  margin: 1;
+}
+
+StatusDisplay {
+  text-style: bold;
+  text-align: left;
+  padding: 2 5;
+  margin: 3;
+  background: $boost;
+}
+
+Confirmation {
+  text-style: bold;
+  layout: horizontal;
+  padding: 1;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+Input {
+  width: 40
+}
+
+Input.-valid {
+  border: tall $success 60%;
+}
+
+Input.-valid:focus {
+  border: tall $success;
+}
