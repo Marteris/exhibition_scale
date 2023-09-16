@@ -71,13 +71,14 @@ Du kannst mit den Pfeiltasten navigieren. Drücke die Pfeiltaste nach unten, um 
 Geben die Zeit als Zahl ein. Das legt die Gesamtspielzeit des Videos fest.
 Wenn die Zahl kleiner als 10 ist, wird sie automatisch auf 10 Minuten eingestellt.
 
-## Beispiel
+### Beispiel
 
 Wenn man 30 Minuten eingibt, spielt jede Stufe des Videos 1 Minute 30 Sekunden (30 : 20 = 1,5).
 
 Nach 30 Minuten sollte das letzte Video erreicht sein (mit dem Schmetterling).
 Dieses Video spielt endlos.
-Tastaturfunktionen während des Videos
+
+### Tastaturfunktionen während des Videos
 
 - **N**: Weiter (wechselt zum nächsten Video)
     - In den ersten fünf Sekunden der Videoabschnitte wird der "Übergang" angezeigt.
@@ -89,7 +90,7 @@ Tastaturfunktionen während des Videos
     - Sollte in normalen Fällen nicht erforderlich sein.
     - Könnte etwas beschädigen
 
-## Tastensteuerung auf dem Startbildschirm
+### Tastensteuerung auf dem Startbildschirm
 
 - Verwende die Pfeiltasten, um zwischen dem Zahlenfeld und den Schaltflächen zu wechseln.
     - Hoch/Runter, Links/Rechts
