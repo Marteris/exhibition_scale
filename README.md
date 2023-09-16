@@ -13,7 +13,7 @@ The Raspberry Pi should start. If it works, you should see something like this:
 
 ## Functions
 
-You can navigate with the arrow keys. Press down to select "Start" or "Ausschalten".
+You can navigate with the arrow keys. Press down arrow to select "Start" or "Ausschalten".
 
 Insert time as number. It sets the overall time of the playing video.
 If the number is smaller than 10, it is automatically set to 10 minutes.
@@ -47,5 +47,56 @@ That video plays endlessly.
 - Use Enter to push a button.
 
 Button is selected if it has the black background:
+
+![](screenshots/buttonselected.png)
+
+
+# Deutsch
+
+## Starten
+
+- Schließe das HDMI-Kabel, das Netzkabel (mit Netzschalter), die Tastatur (USB-Stecker) an.
+- Optional: Verbinde ein AUX-Audiokabel.
+- Drücke den Knopf am Netzkabel zum Starten.
+
+Wenn alles funktioniert, solltest Du etwas Ähnliches wie das sehen:
+
+![](screenshots/startscreen.png)
+
+
+## Funktionen
+
+Du kannst mit den Pfeiltasten navigieren. Drücke die Pfeiltaste nach unten, um "Start" oder "Ausschalten" auszuwählen.
+
+Geben die Zeit als Zahl ein. Das legt die Gesamtspielzeit des Videos fest.
+Wenn die Zahl kleiner als 10 ist, wird sie automatisch auf 10 Minuten eingestellt.
+
+## Beispiel
+
+Wenn man 30 Minuten eingibt, spielt jede Stufe des Videos 1 Minute 30 Sekunden (30 : 20 = 1,5).
+
+Nach 30 Minuten sollte das letzte Video erreicht sein (mit dem Schmetterling).
+Dieses Video spielt endlos.
+Tastaturfunktionen während des Videos
+
+- **N**: Weiter (wechselt zum nächsten Video)
+    - In den ersten fünf Sekunden der Videoabschnitte wird der "Übergang" angezeigt.
+    Daher muss man zweimal drücken, um zum nächsten Abschnitt zu gelangen.
+- **B**: Zurück (wechselt zum vorherigen Video)
+- **C**: Abbrechen (Verlassen Sie das Video und kehren Sie zum Startbildschirm zurück)
+- **Wenn nichts funktioniert**: Drücke Strg+Alt+Entf oder drücke die Ein-/Aus-Taste
+    - Startet den Raspberry Pi neu
+    - Sollte in normalen Fällen nicht erforderlich sein.
+    - Könnte etwas beschädigen
+
+## Tastensteuerung auf dem Startbildschirm
+
+- Verwende die Pfeiltasten, um zwischen dem Zahlenfeld und den Schaltflächen zu wechseln.
+    - Hoch/Runter, Links/Rechts
+- Verwende die Tastatur, um eine Zahl einzugeben.
+    - Nur Zahlen, 2 Stunden sind 120, nicht 2:00 oder ähnliches.
+- Verwende die Eingabetaste, um eine Schaltfläche zu aktivieren.
+
+Eine Schaltfläche ist ausgewählt, wenn sie einen schwarzen Hintergrund hat:
 
 ![](screenshots/buttonselected.png)
