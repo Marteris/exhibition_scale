@@ -19,17 +19,21 @@ class Controls(Static):
     def compose(self) -> ComposeResult:
         self.bStart = Button("Start", id="start", variant="success")
         self.bOff = Button("Ausschalten", id="poweroff", variant="error")
+        self.bFirst = Button("Erstes Video", id="firstvid")
         yield self.bStart
         yield self.bOff
+        yield self.bFirst
 
 
     def disable(self) -> None:
         self.bStart.disabled = True
         self.bOff.disabled = True
+        self.bFirst.disabled = True
 
     def enable(self) -> None:
         self.bStart.disabled = False
         self.bOff.disabled = False
+        self.bFirst.disabled = False
 
 class StatusDisplay(Static):
     message = reactive("Hallo")
@@ -105,7 +109,12 @@ class ScaleGuiApp(App):
     def startplayer(self) -> None:
         # videoplayer
         self.end_videos = False
-        self.currentVideo = 0
+        try:
+            if not self.currentVideo > 0:
+                self.currentVideo = 0
+        except (NameError, AttributeError) as error:
+            self.currentVideo = 0
+
         self.transition_max_duration = 5
         self.repeat_max_duration = 9
         instance = vlc.Instance()
@@ -216,6 +225,9 @@ class ScaleGuiApp(App):
             controls.disable()
             inputF.disable()
             confirmation.show()
+        elif button_id == "firstvid":
+            self.currentVideo = 0
+            self.output_field.setMessage("Video zurückgesetzt")
         elif button_id == "yes":
             """TODO: shutdown"""
             os.system('shutdown -h now')
@@ -252,6 +264,7 @@ class ScaleGuiApp(App):
             self.mplayer.play_item_at_index(0)
             lock.release()
             #print("key input: changing to video #" + str(self.currentVideo) + ", is transition: " + str(self.in_transition))
+        self.stage_start_time = time.time()
 
 
     def goToNextVideo(self) -> None:
